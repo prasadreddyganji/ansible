@@ -1,0 +1,12 @@
+---
+- name: change mode and execute script
+  hosts: web
+  tasks:
+
+  - name: change permission
+    file:
+      path: /home/wasabi2/x.sh
+      mode: u+x
+    
+  - name: execute
+    shell: "/home/wasabi2/x.sh" 

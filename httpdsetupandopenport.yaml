@@ -1,0 +1,26 @@
+---
+- name: install httpd , start , then open port
+  hosts: web
+
+  tasks:
+    - name: install httpd
+      yum:
+        name: httpd
+        state: present
+
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
+
+
+    - name: open port 80 for http access
+      firewalld:
+        service: http
+        permanent: true
+        state: enabled
+
+    - name: restart firewalld
+      service:
+        name: firewalld
+        state: reloaded

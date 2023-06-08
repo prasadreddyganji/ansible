@@ -1,0 +1,8 @@
+---
+- name: login to client node and change file permits in client node
+  hosts: web
+  tasks:
+    - name: change permissions 
+      file:
+        path: /etc/sample.txt
+        mode: u+x

@@ -1,0 +1,23 @@
+---
+- name: download tomcat using get_url
+  hosts: web
+
+
+  tasks: 
+    - name: create a directory tomcat in /opt
+      file:
+        path: /opt/tomcat
+        state: directory
+        mode: 0755
+        owner: root
+        group: root
+
+
+    - name: download tomcat using get url
+      get_url:
+         url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.90/bin/apache-tomcat-8.5.90.tar.gz
+         dest: /opt/tomcat
+         mode: 0755
+         group: wasabi2
+         owner: wasabi2
+
