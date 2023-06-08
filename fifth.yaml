@@ -1,0 +1,7 @@
+--- 
+- name: fifth yaml file
+  hosts: localhost
+  tasks:
+
+  - name: run a shell command
+    shell: mkdir prasaddir/

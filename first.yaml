@@ -1,0 +1,7 @@
+---
+- name: first yaml playbook
+  hosts: localhost
+  
+  tasks:
+  - name: test connectivity
+    ping:

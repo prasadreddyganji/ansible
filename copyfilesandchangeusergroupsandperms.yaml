@@ -1,0 +1,13 @@
+---
+- name: copy files and change permissions
+  hosts: web
+
+  tasks: 
+  - name: copy files
+    copy:
+     src: /etc/ansible/playbooks/sample.txt
+     dest: /etc/sample.txt
+     owner: wasabi2
+     group: wasabi2
+     mode: 0644
+

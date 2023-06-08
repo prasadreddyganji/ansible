@@ -1,0 +1,8 @@
+---
+- name: install tree
+  hosts: localhost
+  tasks:
+  - name: tree install steps
+    yum:
+     name: tree
+     state: present

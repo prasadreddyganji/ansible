@@ -1,0 +1,9 @@
+---
+- name: yaml file to copy files to remote clients
+  hosts: all
+  tasks:
+  - name: copy files
+    copy:
+     src: /etc/ansible/playbooks/example.txt
+     dest: /etc/example.txt
+ 

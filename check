@@ -1,0 +1,7 @@
+---
+- name:
+  hosts: web1:web
+
+  tasks:
+  - name: pin g web 1
+    ping:

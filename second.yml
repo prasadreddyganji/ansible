@@ -1,0 +1,16 @@
+---
+- name: printing helloworld,prasadreddy, check ping
+  hosts: localhost
+
+  tasks:
+    - name: printing hello world
+      debug: 
+       msg: "helloworld"
+   
+    - name: print prasad reddy
+      debug:
+       msg: "prasad" 
+   
+    - name: check ping
+      ping:
+    
